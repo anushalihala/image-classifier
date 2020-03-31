@@ -68,11 +68,11 @@ if __name__ == '__main__':
     feature_model.features.name = args.arch
     
     if args.arch == 'vgg16':
-        input_size = model.classifier[0].in_features
+        input_size = feature_model.classifier[0].in_features
     elif args.arch == 'densenet':
-        input_size = model.classifier.in_features
+        input_size = feature_model.classifier.in_features
     elif args.arch == 'squeezenet':
-        input_size = model.classifier[1].in_channels
+        input_size = feature_model.classifier[1].in_channels
     #elif args.arch == 'resnet' or args.arch == 'inception' :
         #input_size = model.fc.in_features
     
